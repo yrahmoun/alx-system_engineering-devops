@@ -1,0 +1,3 @@
+#!/bin/bash
+SUM = $TRUEKNOWLEDGE + 128
+echo $SUM
