@@ -1,0 +1,11 @@
+frontend  main
+        bind *:80
+        bind *:443 ssl crt /etc/letsencrypt/live/www.yrahmoun.tech/yrahmoun.tech.pem
+        mode http
+        default_backend web_servers
+
+backend web_servers
+        balance roundrobin
+        mode http
+        server 512134-web-01 34.224.5.162:80 check
+        server 512134-web-02 54.165.200.8:80 check
